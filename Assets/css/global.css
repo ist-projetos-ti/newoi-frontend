@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Roboto+Slab:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0ch;
+}
+
+body{
+    color: rgb(0, 0, 0);
+    -webkit-font-smothing: antialiased;
+    overflow: hidden;
+}
+
+body, input, button, select{
+    font-family:  'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24.38px;
+}
+
+h1, h2, h3, h4, h5, h6, strong{
+    font-weight: normal;
+}
+
+.button{
+    cursor: pointer;
+    border: 0;
+    color: #FFF;
+    width: 170px;
+    height: 47px;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #e6d112 0%, #E9BD00 100%);
+    border-radius: 50px;
+ }
+ 
+ .button:hover{
+    background: linear-gradient(135deg, #d8c200 0%, #c8971a 100%);
+ }
+ 
