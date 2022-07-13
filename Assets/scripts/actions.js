@@ -22,9 +22,9 @@ window.StopAction = async function StopAction(){
         document.getElementById("load-stop-container").style.display = "flex";
         document.getElementById("load-stop-container").style.padding = " 3rem"
 
-    }, 2300);
+    }, 2289);
 
-    setTimeout(function() {
+    await setTimeout(function() {
         document.getElementById("spinAction").style.display = "none";
         document.getElementById("no-auth-container").style.display = "block";
     }, 2300);

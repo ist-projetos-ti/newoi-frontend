@@ -165,11 +165,11 @@ body div#load-stop-container{
 
 @media (max-width: 580px)
 {
-   .main-content{
+   body div.main-content{
       width: 21rem;
       height: 40rem;
    }
-   .input{
+   body div select, input.input{
       height: 3rem;
       width: 19rem;
    }
@@ -177,7 +177,7 @@ body div#load-stop-container{
 
 @media (max-height: 670px)
 {
-   .main-content{
+   body div.main-content{
       margin-top: 2rem;
    }
 }
