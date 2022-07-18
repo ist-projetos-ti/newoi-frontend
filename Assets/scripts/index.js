@@ -1,16 +1,13 @@
 document.addEventListener('click', (event) => {
 
-    if (!event.target.matches('#icon')) return;
+    if (!event.target.matches('#icon') && !event.target.matches('#icon2') && !event.target.matches('#p')) return;
     event.preventDefault();
 
     const element = document.getElementById('notificationBar');
-    const btn = document.getElementById('icon');
-    const notific = document.getElementById('notification');
+    const btn = document.getElementById('btn');
 
-    btn.classList.toggle("isOpen");
-    element.classList.toggle("isOpen");
-    notific.classList.toggle('isOpen');
-
+    btn.classList.toggle('isOpened');
+    element.classList.toggle('isOpened');
 }, false);
 
 
@@ -20,8 +17,6 @@ document.addEventListener('click', (event) => {
     event.preventDefault();
 
     const element = document.getElementById('nav');
-    const content = document.getElementById('content');
 
     element.classList.toggle('isClosed');
-    content.classList.toggle('isClosed');
 }), false;

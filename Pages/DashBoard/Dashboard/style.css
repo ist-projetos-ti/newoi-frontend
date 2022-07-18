@@ -150,144 +150,8 @@ body header div#topUser div#dateInformation div ion-icon {
 body main {
     width: 100vw;
     height: 70vh;
-
     flex-direction: row;
     justify-content: space-around;
-}
-
-body main nav#nav {
-    width: 15%;
-    height: 100%;
-    background-color: #fff;
-    border-radius: 2rem;
-    flex-direction: column;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-
-    transition: width 0.5s;
-    transition-timing-function: linear;
-}
-
-body main nav#nav.isClosed {
-    width: 4%;
-    transition: width 0.5s;
-    transition-timing-function: linear;
-}
-
-body main nav#nav.isClosed ul {
-    align-items: center;
-    margin-top: 5%;
-    justify-content: space-around;
-}
-
-body main nav#nav.isClosed ul li,
-body main nav#nav.isClosed ul#topMenu {
-    display: flex;
-    margin-top: 30%;
-}
-
-body main nav#nav.isClosed ul#bottomMenu {
-    margin-bottom: 40%;
-}
-
-body main nav#nav.isClosed ul div#notificationBar a,
-body main nav#nav.isClosed ul li a p,
-body main nav#nav.isClosed ul li button {
-    display: none;
-    transition: 0.5s;
-}
-
-body main nav#nav.isClosed div#openCloseNav {
-    transform: rotate(90deg);
-    transition: 0.5s;
-}
-
-body main div#content.isClosed {
-    width: 85%;
-}
-
-
-body main nav#nav div#openCloseNav {
-    width: 4rem;
-    height: 2.5rem;
-    border-radius: 20px;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    right: -2rem;
-    cursor: pointer;
-
-    transform: rotate(-90deg);
-    font-weight: 600;
-    transition: 0.5s;
-    background: url('../../../Assets/img/Arrow.svg') no-repeat center #fff;
-}
-
-
-body main nav#nav ul#topMenu {
-    margin-top: 5%;
-    width: 88%;
-    height: auto;
-    flex-direction: column;
-}
-
-body main nav#nav ul#bottomMenu {
-    margin-bottom: 10%;
-    width: 88%;
-    height: 15%;
-    flex-direction: column;
-}
-
-body main nav#nav ul#topMenu div#notificationBar {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-    opacity: 0;
-    transition: width 0.5s, opacity 500ms, visibility 1s, height 0.5s;
-    flex-direction: column;
-}
-
-body main nav#nav ul#topMenu div#notificationBar.isOpen {
-    width: 100%;
-    height: 100%;
-    visibility: visible;
-    opacity: 1;
-
-    flex-direction: column;
-}
-
-body main nav#nav ul#topMenu div#notificationBar div.notification {
-    width: 100%;
-
-    margin-top: 5%;
-    flex-direction: row;
-    align-items: center;
-}
-
-body main nav#nav ul#topMenu div#notificationBar div.notification a {
-    text-decoration: none;
-    align-items: center;
-}
-
-body main nav#nav ul#topMenu div#notificationBar div.notification ion-icon {
-    font-size: 1.6rem;
-    color: #A6A6A6;
-    margin-left: 2.2rem;
-
-}
-
-body main nav#nav ul#topMenu div#notificationBar div.notification p {
-    font-size: 1rem;
-    color: #A6A6A6;
-    text-transform: capitalize;
-    margin-left: 1rem;
-}
-
-body main nav#nav ul li {
-    margin-top: 10%;
-    align-items: center;
 }
 
 body main nav#nav ul li.page * {
@@ -295,72 +159,144 @@ body main nav#nav ul li.page * {
     font-weight: 600;
 }
 
-body main nav#nav ul li:hover *,
-body main nav#nav ul#topMenu div#notificationBar div.notification:hover * {
-    color: #233E71;
-    font-weight: 600;
-}
-
-body main nav#nav ul#topMenu li button#notificationBtn {
-    border: none;
-    align-items: flex-end;
-    margin-left: 5%;
+body main div#content,
+body main nav#nav {
     background-color: #fff;
-    flex-wrap: wrap;
+    border-radius: 2rem;
+    margin: 0rem 2rem;
+    position: relative;
 }
 
-body main nav#nav ul li button#notificationBtn ion-icon {
-    font-size: 1.2rem;
-    transition: 0.5s;
-    color: #A6A6A6;
+body main nav#nav {
+    padding: 1rem;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
-body main nav#nav ul div#notificationBar a#notification p *{
+body main nav#nav div#openCloseNav {
+    width: 5rem;
+    height: 2.5rem;
+    position: absolute;
+    right: -2.5rem;
+    top: 50%;
     cursor: pointer;
+    border-radius: 2rem;
+    background: url('../../../Assets/img/Arrow.svg') no-repeat center #fff;
+    transform: rotate(90deg);
+    transition: 0.5s;
 }
 
-body main nav#nav ul li a#notification.isOpen p,
-body main nav#nav ul li a#notification.isOpen ion-icon,
-body main nav#nav ul li button#notificationBtn ion-icon#icon.isOpen {
+body main nav#nav.isClosed div#openCloseNav {
+    transform: rotate(-90deg);
+    transition: 0.5s;
+}
+
+body main nav#nav ul {
+    flex-direction: column;
+    transition: 1s;
+}
+
+body main nav#nav ul#topMenu div#notificationBar div:hover a *,
+body main nav#nav ul li:hover a * {
     color: #233E71;
-    font-weight: 600;
 }
 
-body main nav#nav ul li button#notificationBtn ion-icon.isOpen {
+body main nav#nav ul#topMenu div#notificationBar div a,
+body main nav#nav ul li a {
+    text-decoration: none;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+body main nav#nav ul#topMenu div#notificationBar div a *,
+body main nav#nav ul li a * {
+    color: #A6A6A6;
+    font-size: 1rem;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+body main nav#nav ul#topMenu div#notificationBar div a p,
+body main nav#nav ul li a p {
+    opacity: 1;
+    visibility: visible;
+    width: 7rem;
+    padding-left: 0.5rem;
+    transition: width 0.5s, opacity 0.5s, visibility 1s;
+}
+
+body main nav#nav.isClosed ul#topMenu li a#notificationBtn button#btn,
+body main nav#nav.isClosed ul li a p {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: auto;
+    padding-left: 0;
+    transition: width 0.5s, opacity 0.5s, visibility 1s;
+}
+
+body main nav#nav ul#topMenu div#notificationBar div a ion-icon,
+body main nav#nav ul li a ion-icon {
+    font-size: 1.4rem;
+}
+
+body main nav#nav ul#topMenu li a#notificationBtn button#btn {
+    background-color: #fff;
+    opacity: 1;
+    visibility: visible;
+    width: 2rem;
+    padding: 0rem;
+    border: none;
+    transition: 0.5s;
+}
+
+body main nav#nav ul#topMenu li a#notificationBtn button#btn.isOpened {
     transition: 0.5s;
     transform: rotate(180deg);
 }
 
-body main nav#nav ul li a {
-    text-decoration: none;
-    align-items: center;
-    color: #233E71;
-    flex-wrap: wrap;
+body main nav#nav ul#topMenu div#notificationBar * {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    justify-content: center;
+    flex-direction: column;
+    transition: width 0.5s, opacity 0.5s, visibility 1s, height 0.5s;
 }
 
-body main nav#nav ul li a p {
-    margin-left: 1rem;
-    text-transform: capitalize;
-    color: #A6A6A6;
+body main nav#nav ul#topMenu div#notificationBar.isOpened * {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 2.5rem;
+    transition: width 0.5s, opacity 0.5s, visibility 1s, height 0.5s;
 }
 
-body main nav#nav ul li a ion-icon {
-    font-size: 1.6rem;
-    color: #A6A6A6;
+body main nav#nav ul#topMenu div#notificationBar.isOpened div a {
+    flex-direction: row;
+    margin-left: 1.5rem;
+}
+
+body main nav#nav ul#topMenu div#notificationBar.isOpened div a ion-icon {
+    width: 17%;
+}
+
+body main nav#nav ul#topMenu div#notificationBar.isOpened {
+    flex-direction: column;
+}
+
+body main nav#nav.isClosed ul#topMenu div#notificationBar.isOpened * {
+    display: none;
 }
 
 body main div#content {
-    background-color: #fff;
-    border-radius: 30px;
-
-    width: 77%;
-    height: 100%;
+    flex: 1;
 }
 
 body footer {
     width: 100%;
     height: 15vh;
-
     justify-content: space-between;
     align-items: center;
 }
@@ -369,7 +305,6 @@ body footer div.logoFooter {
     width: 25%;
     height: 100%;
     flex-wrap: wrap;
-
     justify-content: space-around;
     align-items: center;
 }
@@ -387,28 +322,12 @@ body footer img {
     width: 4%;
 }
 
-@media (max-width: 1400px) {
-    body main nav#nav {
-        width: 19%;
-    }
-}
 
 @media (max-width: 1025px) {
 
+    body header div#topUser,
     body header div#topLogo {
         width: 25%;
-    }
-
-    body header div#topUser {
-        width: 25%;
-    }
-
-    body main nav#nav {
-        width: 24%;
-    }
-
-    body main nav#nav.isClosed {
-        width: 6%;
     }
 
     body main div#content {
@@ -418,115 +337,120 @@ body footer img {
 
 
 @media (max-width: 801px) {
-    main {
+
+    body header {
+        height: 20vh;
+    }
+
+    body main {
+        height: 60vh;
         position: relative;
     }
 
     body main nav#nav {
-        width: 0%;
-        left: 0;
         position: absolute;
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
-    }
-
-    body main nav#nav.isClosed ul li,
-    body main nav#nav.isClosed ul#topMenu {
-        display: flex;
-        margin-top: 3%;
-        width: 90%;
-    }
-
-    body main nav#nav.isClosed ul#bottomMenu {
-        display: flex;
-        padding-top: 10%;
-    }
-
-    body main nav#nav.isClosed ul li {
-        margin-top: 7%;
-    }
-
-    body main nav#nav.isClosed ul#bottomMenu *, 
-    body main nav#nav.isClosed ul#topMenu *,
-    body main nav#nav.isClosed ul#topMenu div#notificationBar div.notification * {
-        display: flex;
-    }
-
-    body main nav#nav ul#topMenu *,
-    body main nav#nav ul#bottomMenu * {
-        display: none;
-    }
-
-    body main nav#nav.isClosed {
-        width: 50%;
+        height: 100%;
+        left: -15rem;
+        transition: 1s;
     }
 
     body main nav#nav div#openCloseNav {
-        box-shadow: -1px 10px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    body main nav#nav div#openCloseNav {
-        border-top-right-radius: 20px;
-        border-top-left-radius: 20px;
-        top: 45%;
-        height: 6rem;
-        left: -1rem;
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        transform: rotate(-90deg);
+        transition: 0.5;
     }
 
     body main nav#nav.isClosed div#openCloseNav {
-        top: 45%;
-        height: 3rem;
-        left: 90%;
-        box-shadow: -1px -10px 10px rgba(0, 0, 0, 0.1);
+        transform: rotate(90deg);
+        box-shadow: 0px -10px 7px #a6a6a650;
+        transition: 0.5s;
     }
 
-    body main nav#nav.isClosed ul {
-        display: none;
+    body main nav#nav.isClosed {
+        left: -2rem;
+        transition: 1s;
+
+        box-shadow: 0px 0px 10px 1px #A6A6A6;
+    }
+
+    body main nav#nav.isClosed ul li a {
+        padding: 10px;
+    }
+
+    body main nav#nav ul#topMenu div#notificationBar div a, 
+    body main nav#nav ul li a {
+        text-decoration: none;
+        align-items: unset;
+        padding: 0.5rem;
+    }
+
+    body main nav#nav.isClosed ul li a p {
+        opacity: 1;
+        visibility: visible;
+        width: 7rem;
+        padding-left: 0.5rem;
+    }
+
+    body main nav#nav.isClosed ul#topMenu div#notificationBar.isOpened * {
+        display: flex;
+    }
+    
+    body main nav#nav.isClosed ul#topMenu li a#notificationBtn button#btn {
+        width: 2rem;
+        height: 1rem;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    body main nav#nav ul#topMenu div#notificationBar * {
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        transition: width 0.5s, opacity 0.5s, visibility 1s, height 0.5s;
+    }
+
+    body main nav#nav ul#topMenu div#notificationBar.isOpened * {
+        opacity: 1;
+        visibility: visible;
+        height: 1.5rem;
+        width: 100%;
+        margin: 0;
+        transition: width 0.5s, opacity 0.5s, visibility 1s, height 0.5s;
+    }
+
+    body main nav#nav ul#topMenu div#notificationBar.isOpened div {
+        height: 2rem;
+        justify-content: space-around;
     }
 
     body main div#content {
-        position: absolute;
-        left: 5%;
         z-index: -1;
-        width: 90%
     }
 
-    body main div#content.isClosed {
-        width: 90%;
-        left: 5%;
+    body footer {
+        height: 20vh;
     }
 
-    body footer img {
+    body footer div p {
+        display: none;
+    }
+
+    body footer img,
+    body footer div.logoFooter img {
         width: 4rem;
         height: 4rem;
-    }
-
-    body footer div.logoFooter img {
-        width: 5rem;
-        height: 5rem;
-    }
-
-    body footer div.logoFooter p {
-        display: none;
     }
 }
 
 @media (max-width: 545px) {
 
+    body header div#topUser,
     body header div#topLogo {
-        width: 45%;
-    }
-
-    body header div#topUser {
         width: 45%;
     }
 
     body header div#topSearch {
         display: none;
-    }
-
-    body main nav#nav.isClosed {
-        width: 60%;
     }
 
 }

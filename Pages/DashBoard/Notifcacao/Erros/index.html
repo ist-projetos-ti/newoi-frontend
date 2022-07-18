@@ -12,7 +12,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <title>Erros</title>
+    <title>Home</title>
 
 </head>
 
@@ -75,26 +75,26 @@
                         <p>dashboard</p>
                     </a>
                 </li>
-                <li class="page">
-                    <a id="notification">
-                        <ion-icon name="notifications-outline"></ion-icon>
-                        <p>notificações</p>
+                <li class="page" >
+                    <a id="notificationBtn" href="#">
+                        <ion-icon id="icon2" name="notifications-outline"></ion-icon>
+                        <p id="p">notificações</p>
+                        <button id="btn">
+                            <ion-icon id="icon" name="chevron-down-outline"></ion-icon>
+                        </button>
                     </a>
-                    <button id="notificationBtn">
-                        <ion-icon id="icon" name="chevron-down-outline"></ion-icon>
-                    </button>
                 </li>
-                <div id="notificationBar" >
-                    <div class="notification">
-                        <a  href="../Avisos/index.html">
-                            <ion-icon  name="alert-circle-outline"></ion-icon>
-                            <p >avisos</p>
+                <div id="notificationBar">
+                    <div>
+                        <a href="../../Notifcacao/Avisos/index.html">
+                            <ion-icon name="alert-circle-outline"></ion-icon>
+                            <p>avisos</p>
                         </a>
                     </div>
-                    <div class="notification">
-                        <a href="../Erros/index.html">
-                            <ion-icon class="page" name="warning-outline"></ion-icon>
-                            <p class="page">erros</p>
+                    <div>
+                        <a href="../../Notifcacao/Erros/index.html">
+                            <ion-icon name="warning-outline"></ion-icon>
+                            <p>erros</p>
                         </a>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
 
             <ul id="bottomMenu">
                 <li>
-                    <a href="#">
+                    <a href="../../Suporte/index.html">
                         <ion-icon name="help-circle-outline"></ion-icon>
                         <p>suporte</p>
                     </a>
